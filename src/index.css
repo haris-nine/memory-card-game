@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Parewide';
+  src: url('./assets/parewide-normal.woff2');
+}
+
+body {
+  min-height: 100svh;
+  background-color: #3882f6;
+  display: flex;
+  align-items: center;
+}
+
+#root {
+  width: 100vw;
+}
+
+.animate-shuffle {
+  animation: shuffle 1s ease-in-out;
+}
+
+@keyframes shuffle {
+  50% {
+    transform: scale(0) rotate(180deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.animatey {
+  animation: darky 0.5s ease-in-out;
+}
+
+@keyframes darky {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3882f6;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.card:hover {
+  scale: 1.1;
+}
